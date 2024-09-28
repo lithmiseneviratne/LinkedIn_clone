@@ -15,6 +15,8 @@ exports.handler = async (event) => {
     const clientId = '867639hjcxnxsb';
     const clientSecret = 'ayIjiEN7Uj8zZ4ik';
     const redirectUri = 'https://transcendent-cheesecake-90be30.netlify.app/.netlify/functions/linkedin-auth';
+    console.log(event.queryStringParameters); // This will log all query params including the code
+
 
     try {
         const tokenResponse = await axios.post(tokenUrl, null, {
