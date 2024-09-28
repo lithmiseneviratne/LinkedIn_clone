@@ -2,7 +2,10 @@ const fetch = require('node-fetch');
 
 exports.handler = async (event) => {
   try {
-    // Parse the incoming request
+    // Log the entire event object to inspect its structure
+    console.log("Event data received:", event);
+
+    // Parse the incoming request to get the authorization code
     const { code } = event.queryStringParameters || {};
 
     // Check if the authorization code is provided
