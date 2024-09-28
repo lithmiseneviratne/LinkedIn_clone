@@ -14,7 +14,7 @@ exports.handler = async (event) => {
     const tokenUrl = 'https://www.linkedin.com/oauth/v2/accessToken';
     const clientId = '867639hjcxnxsb';
     const clientSecret = 'ayIjiEN7Uj8zZ4ik';
-    const redirectUri = 'https://redirectnetlify.netlify.app/.netlify/functions/linkedin-auth';
+    const redirectUri = 'https://transcendent-cheesecake-90be30.netlify.app/.netlify/functions/linkedin-auth';
 
     try {
         const tokenResponse = await axios.post(tokenUrl, null, {
