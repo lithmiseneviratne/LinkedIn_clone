@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LinkedIn OAuth Redirect</title>
     <script>
-        // Get the authorization code from the URL parameters
-        const urlParams = new URLSearchParams(window.location.search);
-        const authCode = urlParams.get('code');
-
-        if (authCode) {
-            // Redirect back to your app with the authorization code
-            const redirectToApp = `myapp://auth/callback?code=${authCode}`;
-            window.location.href = redirectToApp;
-        } else {
-            document.write('Authorization code not found');
-        }
-    </script>
+      // Get the full URL of the current page
+      const urlParams = new URLSearchParams(window.location.search);
+    
+      // Extract the authorization code
+      const authorizationCode = urlParams.get('code');
+    
+      // If authorization code is found, pass it to your app (or handle it here)
+      if (authorizationCode) {
+        console.log("Authorization Code:", authorizationCode);
+    
+        // Now, you can send this code back to your app (e.g., via a deep link or fetch request)
+      } else {
+        console.error("Authorization code not found in the URL");
+      }
+</script>
 </head>
 <body>
     <h1>LinkedIn OAuth Redirect</h1>
