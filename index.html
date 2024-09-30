@@ -14,6 +14,7 @@
       // If authorization code is found, pass it to your app (or handle it here)
       if (authorizationCode) {
         console.log("Authorization Code:", authorizationCode);
+        window.location.href = `myapp://oauth/callback?code=${authorizationCode}`;
     
         // Now, you can send this code back to your app (e.g., via a deep link or fetch request)
       } else {
